@@ -11,23 +11,27 @@ $ (function() {
 $('.add-button').on('click' , addItem);
 });
 
-$('.trash').on('click', 'li', function(){
-    $("li:last").parent().remove();
-});
-
-$('.ul').on('click', '.gotit', function(){
-    $("li:first").css("text-decoration"," line-through");
+$('.gotit').click(function(){
+$('li:last').css("text-decoration"," line-through");
 });
 
 $('.ul').on('click', '.trash', function() {
-		$(this).closest('li').toggleClass('li');
-		$('li:last').remove();
+	$('li:last').parent().remove();
 });
+
+});     
 
 //$('.add-items').keydown(function (enter) {
 //if (enter.keyCode == 13) {
 //text();
 //});
 
-});     
 
+//$('.ul').on('click', '.trash', function() {
+	//	$(this).closest('li').toggleClass('li');
+//	$('li:last').remove();
+//});
+
+//$('.trash').on('click', 'li', function(){
+  //  $("li:last").parent().remove();
+//});
