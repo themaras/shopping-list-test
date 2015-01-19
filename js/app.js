@@ -16,7 +16,7 @@ $('li:last').css("text-decoration"," line-through");
 });
 
 $('.ul').on('click', '.trash', function() {
-	$('li:last').parent().remove();
+	$('li:last').remove();
 });
 
 });     
