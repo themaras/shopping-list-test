@@ -1,37 +1,38 @@
-
-$(document).ready(function(){
-
-function addItem() {
-var text = $('.add-items').val();
-$('.ul').append('<img class="trash" src="images/trash.png"><li>'+text+'<button class="gotit">gotit!</button></li>');
-$('.add-items').val(''); 
-}
-
-$ (function() {
-$('.add-button').on('click' , addItem);
-});
-
-$('.gotit').click(function(){
-$('li:last').css("text-decoration"," line-through");
-});
-
-$('.ul').on('click', '.trash', function() {
-	$('li:last').remove();
-});
-
-});     
-
-//$('.add-items').keydown(function (enter) {
-//if (enter.keyCode == 13) {
-//text();
-//});
+$(document).ready(function () {
+    $('.add-button').click(function () {
+        var input = $('.add-items').val();
+        if ($('.add-items').val().length === 0) {
+            alert('put something here');
+            return false;
+        }
+        $('.ul').append('<li><button class="delete">Delete</button>' + input + '<button class="gotit">gotit!</button></li>');
+    });
 
 
-//$('.ul').on('click', '.trash', function() {
-	//	$(this).closest('li').toggleClass('li');
-//	$('li:last').remove();
-//});
+    $('.add-items').keypress(function (e) {
+        if (e.which == 13) {
+            if ($('.add-items').val().length === 0) {
+                alert('put something here');
+                return false;
+            }
+            var input = $('.add-items').val();
+            $('.ul').append('<li><button class="delete">Delete</button>' + input + '<button class="gotit">gotit!</button></li>');
+        }
+    });
 
-//$('.trash').on('click', 'li', function(){
-  //  $("li:last").parent().remove();
-//});
+    $('.deleteall').click(function () {
+        $("ul").empty();
+    });
+    
+ 
+    $('ul').on('click','.delete:button', function() {
+$(this).closest('li').remove();
+    });
+    
+    $('ul').on('click','.gotit:button', function() {
+$(this).closest('li').toggleClass("stroked");
+    });
+ 
+ });
+
+

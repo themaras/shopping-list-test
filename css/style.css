@@ -142,17 +142,7 @@ img {
 	text-align: center;
 }
 
-.trash img {
-	border: 0.1em solid black;
-	border-radius: 2em;
-	display: block;
-}
 
-.trash {
-	margin-top: 0.6em;
-	display: block;
-}
-
-.data {
-	display: none;
+.stroked {
+     text-decoration: line-through; 
 }
