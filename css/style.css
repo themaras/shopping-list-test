@@ -48,26 +48,29 @@ table {
 
 body {
 	font-family: arial;
-	background-color: white;
+	background-image: url(http://images8.alphacoders.com/370/370799.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .wrapper {
 	width:28em;
 	text-align: center;
 	margin: 0 auto;
-	background-color: #a4e6e7;
-	border: 0.3em solid #79b66f;
+	background-color: #eae8e8;
+	border: 0.3em solid black;
 	border-radius: 2em;
+	margin-top: 3em;
 }
 
 .h1 {
 	color: #79b66f;
 	text-align: left;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
-h1 > img {
-	width: 2em;
+.icon {
+	width: 3em;
 }
 
 .by {
@@ -84,8 +87,6 @@ h1 > img {
 .input-div > p {
 	color: #79b66f;
 }
-
-
 
 .add-items {
 	text-align: center;
@@ -105,18 +106,18 @@ h1 > img {
 	border-radius: 3em;
 	font-size: 1em;
 	color: #154049;
+	margin-left: 1.5em;
 }
 
 .shopping-list {
-	border: 0.1em solid black;
 	text-align: center;
-	border-radius: 2em;
+	border-radius: 1.3em;
 }
 
 .shopping-list li{
-	font-size: 1.3em;
+	font-size: 1.4em;
 	text-align: left;
-	color: #446d3b;
+	color: #2f294a;
 }
 
 img {
@@ -145,4 +146,26 @@ img {
 
 .stroked {
      text-decoration: line-through; 
+}
+
+.delete {
+	float: left;
+	margin-top: 0.6em;
+	margin-left: 2em;
+	border: 0.1em solid black;
+	text-align: center;
+	border-radius: 2em;
+	color: #562020;
+	font-size: 0.8em;
+}
+
+.deleteall {
+	margin-top: 0.9em;
+	margin-left: 1em;
+	margin-right: 1em;
+	border: 0.1em solid black;
+	text-align: center;
+	border-radius: 2em;
+	color: #562020;
+	font-size: 0.8em;
 }
